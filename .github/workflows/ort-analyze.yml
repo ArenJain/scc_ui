@@ -27,7 +27,7 @@ jobs:
           java -jar ort.jar analyze -i . -o ort-output --allow-dynamic-versions
 
       - name: Upload ORT Output
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ort-results
           path: ort-output

@@ -13,4 +13,5 @@ jobs:
         uses: oss-review-toolkit/ort-ci-github-action@v1
         with:
           vcs-url: 'https://github.com/apache/httpcomponents-client/tree/rel/v5.4.1'
+          vcs-revision: 'refs/tags/rel/v5.4.1'
         

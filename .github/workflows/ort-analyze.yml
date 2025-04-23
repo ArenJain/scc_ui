@@ -11,23 +11,6 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Set up Java 17
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: Download ORT
-        run: |
-          curl -L https://github.com/oss-review-toolkit/ort/releases/latest/download/ort.jar -o ort.jar
-
-      - name: Run ORT Analyzer
-        run: |
-          mkdir ort-output
-          java -jar ort.jar analyze -i . -o ort-output --allow-dynamic-versions
-
-      - name: Upload ORT Output
-        uses: actions/upload-artifact@v4
-        with:
-          name: ort-results
-          path: ort-output
+      - name: Run GitHub Action for ORT
+        uses: oss-review-toolkit/ort-ci-github-action@v1
+        

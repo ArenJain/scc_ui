@@ -13,17 +13,17 @@ jobs:
       - name: Run GitHub Action for ORT
         uses: oss-review-toolkit/ort-ci-github-action@v1
         with:
-          vcs-url: 'https://github.com/apache/httpcomponents-client.git'
-          vcs-revision: 'refs/tags/rel/v5.4.1'
+          vcs-url: 'https://github.com/WebGoat/WebGoat.git'
           run : >
               cache-dependencies,
               labels,
               analyzer,
-              evaluator,
+              scanner,
               advisor,
+              evaluator,
               reporter,
-              upload-results,
-              scanner
+              upload-results
+              
           
           
         

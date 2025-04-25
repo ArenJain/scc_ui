@@ -18,6 +18,15 @@ jobs:
         with:
           vcs-url: 'https://github.com/apache/httpcomponents-client.git'
           vcs-revision: 'refs/tags/rel/v5.4.1'
-          ort-cli-scan-args: -s ScanCode
+          run : >
+              cache-dependencies,
+              labels,
+              analyzer,
+              evaluator,
+              advisor,
+              reporter,
+              upload-results,
+              scanner
+          
           
         

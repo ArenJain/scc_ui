@@ -23,7 +23,7 @@ jobs:
               evaluator,
               reporter,
               upload-results
-          ort-config-path : '.github/config.yml'
+          ort-config-path : '.github/config'
           
           
         

@@ -23,7 +23,7 @@ jobs:
               evaluator,
               reporter,
               upload-results
-          ort-cli-args : '-P ort.scanner.skipExcluded=true --package-types projects'
+          ort-cli-args : '-P ort.scanner.skipExcluded=true --package-types=PROJECT '
           
           
         
